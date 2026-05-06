@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, Row, Col, Card, CardSubtitle } from 'react-bootstrap';
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import Image1 from "../../Assets/menu/burger-11.jpg";
 import Image2 from "../../Assets/menu/burger-12.jpg";
 import Image3 from "../../Assets/menu/burger-13.jpg";
@@ -8,10 +8,8 @@ import Image5 from "../../Assets/menu/burger-15.jpg";
 import Image6 from "../../Assets/menu/burger-16.jpg";
 import Image7 from "../../Assets/menu/burger-17.jpg";
 import Image8 from "../../Assets/menu/burger-18.jpg";
-import Cards from '../../components/Layouts/Cards';
-import { Link } from 'react-router-dom';
-
-
+import Cards from "../../components/Layouts/Cards";
+import { Link } from "react-router-dom";
 
 // Mock Data Cards
 const mockData = [
@@ -101,57 +99,56 @@ const renderRatingIcons = (rating) => {
 };
 
 function Section3() {
-
   return (
     <section className="menu_section">
-        <Container>
-            <Row>
-                <Col lg={{span:8, offset:2}} className="text-center mb-5">
-                <h2>OUR CRAZY BURGER</h2>
-                <p className="para">
-                    Our menu features a variety of mouthwatering burgers, each crafted with unique combinations of fresh ingredients and bold flavors.
-                    From classic cheeseburgers to innovative creations,
-                    we have something to satisfy every burger lover's cravings.
-                </p>
-                </Col>
-            </Row>
-            <Row>{mockData.map((cardData, index) =>(
-                <Cards 
-                key={index}
-                image={cardData.image}
-                rating={cardData.rating}
-                title={cardData.title}
-                paragraph={cardData.paragraph}
-                price={cardData.price}
-                renderRatingIcons={renderRatingIcons}  
-                />   
-            ))}
-            </Row>
-            <Row className="pt-5">
-              <Col sm={6} lg={5}>
-              <div className="ads_box ads_img1 mb-5 mb-md-0">
-                <h4 className="mb-0">GET YOUR FREE</h4>
-                <h5>CHEESE FRIES</h5>
+      <Container>
+        <Row>
+          <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
+            <h2>OUR CRAZY BURGER</h2>
+            <p className="para">
+              Our menu features a variety of mouthwatering burgers, each crafted
+              with unique combinations of fresh ingredients and bold flavors.
+              From classic cheeseburgers to innovative creations, we have
+              something to satisfy every burger lover's cravings.
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          {mockData.map((cardData, index) => (
+            <Cards
+              key={index}
+              image={cardData.image}
+              rating={cardData.rating}
+              title={cardData.title}
+              paragraph={cardData.paragraph}
+              price={cardData.price}
+              renderRatingIcons={renderRatingIcons}
+            />
+          ))}
+        </Row>
+        <Row className="pt-5">
+          <Col sm={6} lg={5}>
+            <div className="ads_box ads_img1 mb-5 mb-md-0">
+              <h4 className="mb-0">GET YOUR FREE</h4>
+              <h5>CHEESE FRIES</h5>
               <Link to="/" className="btn btn_red px-4 rounded-0">
                 Learn More
               </Link>
-              </div>
-              </Col>
-              <Col sm={6} lg={7}>
-              <div className="ads_box ads_img2">
-                <h4 className="mb-0">GET YOUR FREE</h4>
-                <h5>CHEESE FRIES</h5>
+            </div>
+          </Col>
+          <Col sm={6} lg={7}>
+            <div className="ads_box ads_img2">
+              <h4 className="mb-0">GET YOUR FREE</h4>
+              <h5>CHEESE FRIES</h5>
               <Link to="/" className="btn btn_red px-4 rounded-0">
                 Learn More
               </Link>
-              </div>
-              </Col>
-
-
-            </Row>
-        </Container>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
-  )
+  );
 }
 
-export default Section3
+export default Section3;

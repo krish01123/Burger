@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
+import { Container, Row, Carousel } from "react-bootstrap";
 import User1 from "../../Assets/blog/review-author-1.jpg";
 import User2 from "../../Assets/blog/review-author-2.jpg";
 import User3 from "../../Assets/blog/review-author-3.jpg";
